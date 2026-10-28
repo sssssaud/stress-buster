@@ -36,6 +36,7 @@ Vanilla ES modules + Three.js r170. No build step, no npm dependencies at runtim
 
 ## Current status
 - Done: 4 levels (Chappal, Tomato, Rubber Chicken, Frying Pan), free play, drag-to-throw, wall-impact damage, combos, headshots, 6 face moods, name on shirt + wall poster, synth SFX + music + voice, save progress, mobile layout. Physics tests and browser playthrough pass with zero console errors.
-- Pending: deploy to GitHub Pages; real-phone check (touch feel, performance, voice on iOS/Android).
+- Deployed (2026-10-28): repo https://github.com/sssssaud/stress-buster (public), live at https://sssssaud.github.io/stress-buster/ (GitHub Pages, main branch root).
+- Pending: real-phone check (touch feel, performance, voice on iOS/Android).
 - Ideas: more weapons (water balloon, rolling pin), share-a-screenshot button, custom lines entered in the menu.
 - Blockers: none. Note that speechSynthesis voices vary by device; the game works fine with the voice off.
