@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>Stress Buster</title>
+  <meta name="description" content="A silly 3D stress-relief game. Smack the know-it-all until he learns his lesson." />
+  <meta name="theme-color" content="#f6d6e4" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🩴</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <canvas id="game"></canvas>
+
+  <!-- HUD -->
+  <div id="hud">
+    <div class="top">
+      <div class="left">
+        <div id="title">Stress Buster</div>
+        <div id="levelBadge" class="badge">Level 1 / 4</div>
+        <div id="stressText" class="small"></div>
+      </div>
+      <div class="health">
+        <div class="hp-head"><span id="hisName">Bro</span><span id="hpText">100 / 100</span></div>
+        <div class="hp-bar"><div id="hpFill"></div></div>
+        <div id="moodText" class="small"></div>
+      </div>
+      <div class="right">
+        <button id="btnSfx" class="icon-btn" title="Sound effects" aria-label="Sound effects">🔊</button>
+        <button id="btnMusic" class="icon-btn" title="Music" aria-label="Music">🎵</button>
+        <button id="btnVoice" class="icon-btn" title="His voice" aria-label="His voice">🗣️</button>
+        <button id="btnMenu" class="icon-btn" title="Change names" aria-label="Menu">✏️</button>
+      </div>
+    </div>
+    <div id="combo"></div>
+    <div id="hint">Tap him to hit · Drag him to throw 💨</div>
+    <div id="weaponBar"></div>
+  </div>
+
+  <div id="bubble" class="bubble"></div>
+  <div id="floatLayer"></div>
+
+  <!-- Start / names -->
+  <div id="menu" class="overlay">
+    <form class="card" autocomplete="off">
+      <div class="emoji-row">🩴🍅🐔🍳</div>
+      <h1>Stress Buster</h1>
+      <p class="sub">Had a long day? He has opinions. Smack them out of him.</p>
+      <label>Your name<input id="inHer" maxlength="18" placeholder="e.g. Priya" /></label>
+      <label>His name <span class="opt">(goes on his t-shirt)</span><input id="inHim" maxlength="18" placeholder="Mr. Mansplainer" /></label>
+      <p id="menuNote" class="note"></p>
+      <button id="btnStart" class="big-btn" type="submit">Start smashing</button>
+      <button id="btnReset" class="link-btn" type="button" hidden>Start over from level 1</button>
+      <p class="tiny">Sound on for the full experience 🔊</p>
+    </form>
+  </div>
+
+  <!-- Level cleared -->
+  <div id="cleared" class="overlay">
+    <div class="card">
+      <h2 id="clearTitle">Level cleared!</h2>
+      <p id="clearQuote" class="quote"></p>
+      <p id="clearStats" class="stats"></p>
+      <button id="btnNext" class="big-btn">Next level</button>
+    </div>
+  </div>
+
+  <!-- All done -->
+  <div id="final" class="overlay">
+    <div class="card">
+      <div class="crown">👑</div>
+      <h2>Stress: 0%</h2>
+      <p id="finalText" class="quote"></p>
+      <button id="btnFree" class="big-btn">Free play (all weapons)</button>
+      <button id="btnRestart" class="link-btn">Play again from level 1</button>
+    </div>
+  </div>
+
+  <noscript><p class="noscript">This game needs JavaScript turned on.</p></noscript>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
